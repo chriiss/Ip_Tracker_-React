@@ -1,0 +1,11 @@
+{
+    "headerComponent": {
+        "title": "IP Address Tracker",
+        "ip": "ip address",
+        "location": "location",
+        "timezone": "timezone",
+        "isp": "isp",
+        "placeholder": "Search for any IP or address domain"
+
+    }
+}

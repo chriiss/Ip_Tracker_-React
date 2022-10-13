@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+:root {
+  --rem: 1rem;
+  --primary_color: #ffffff;
+  --secondary_color: #020202;
+  --third_color: #7e7d7d;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Rubik', sans-serif;
+}
+
+.bg_header {
+  background-image: url("../assets/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--rem)*1.5);
+  padding-top: calc(var(--rem)*1.5);
+  color: var(--primary_color);
+}
+
+.bg_header form, .bg_header div {
+  display: flex;
+  width: 40rem;
+}
+
+.bg_header form input {
+  width: 100%;
+  height: 60px;
+  padding-left: var(--rem);
+  padding-top: .5rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: calc(var(--rem)*1.5) calc(var(--rem));
+  border-bottom-left-radius: calc(var(--rem)*1.5) calc(var(--rem));
+  font-size: calc(var(--rem)*1.5);
+}
+
+.bg_header form input::placeholder {
+  font-size: calc(var(--rem)*1.5);
+}
+
+.bg_header form button[type="submit"] {
+  background-color: var(--secondary_color);
+  border: none;
+  width: 70px;
+  border-top-right-radius: calc(var(--rem)*1.5) calc(var(--rem));
+  border-bottom-right-radius: calc(var(--rem)*1.5) calc(var(--rem));
+  cursor: pointer;
+}
+
+.bg_header .container {
+  display: flex;
+  background-color: var(--primary_color);
+  width: 75%;
+  margin-top: calc(var(--rem)*3.5);
+  padding: calc(var(--rem)*2);
+  position: absolute;
+  top: 18%;
+  z-index: 1;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.bg_header .container div  {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg_header .container div h3 {
+  color: var(--third_color);
+  text-transform: uppercase;
+}
+
+.bg_header .container div p {
+  color: var(--secondary_color);
+  font-size: calc(var(--rem)*1.5);
+  text-transform: uppercase;
+  margin-top: 0rem;
+}
+
+.bg_header .container div:nth-child(-n+3) {
+  border-right: 1px solid var(--third_color);
+}
+
+.bg_header .container div:nth-child(+n-3) {
+  padding-left: calc(var(--rem)*1.5);
+}
+
+.map {
+  width: 100%;
+  height: 70vh;
+  position:absolute;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .bg_header form {
+    width: 80vw;
+  }
+  .bg_header .container {
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+@media (max-width: 600px) {
+  .bg_header form input {
+    font-size: calc(var(--rem)*1.5/1.5);
+  }
+  .bg_header form input::placeholder {
+    font-size: calc(var(--rem)*1.5/1.5);
+  }
+  .bg_header .container {
+    top: 22%;
+  }
+  .bg_header .container div p {
+    color: var(--secondary_color);
+    font-size: calc(var(--rem)/1.3);
+  }
+}
